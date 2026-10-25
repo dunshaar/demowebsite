@@ -1,0 +1,17 @@
+# Публикуются только файлы сайта
+/*
+!/index.html
+!/brend.html
+!/mybach.html
+!/brend-repertoire.html
+!/mybach-repertoire.html
+!/styles.css
+!/repertoire.css
+!/app.js
+!/assets/
+!/README.md
+!/.gitignore
+!/.nojekyll
+/assets/*
+!/assets/*.webp
+!/assets/*-promo-web.mp4
