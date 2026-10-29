@@ -175,3 +175,70 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
  .stage-text p{font-size:11px;min-height:6em}
  .stage-link{font-size:10px}
 }
+
+/* Shared type and graphite palette for both bands. */
+@font-face{font-family:Manrope;src:url("assets/manrope-variable.ttf") format("truetype");font-weight:200 800;font-style:normal;font-display:swap}
+:root{--display-font:Manrope,Arial,Helvetica,sans-serif}
+.brend,.mybach{--paper:#1c1e1f;--ink:#f3f0e8;--line:#454849;--muted:#bdbdb6;--accent:#ded5c1;color:var(--ink);background:var(--paper)}
+.brend-stage .stage-text,.mybach-stage .stage-text{background:#292c2d;color:#f3f0e8}
+.brend-stage h2,.mybach-stage h2,.brend .band-hero h1,.mybach .band-hero h1,.band-page .other-band strong,.mybach .other-band strong{font-family:var(--display-font);font-weight:750;font-style:normal;letter-spacing:-.055em}
+.band-page h2,.mybach h2,.band-page .band-tagline,.mybach .band-tagline{font-family:var(--display-font);font-weight:550;font-style:normal;letter-spacing:-.045em}
+.band-page .band-hero-copy{min-width:0}
+.brend .band-hero h1,.mybach .band-hero h1{font-size:clamp(58px,6.8vw,122px);line-height:1.05}
+.band-page .band-hero-image{background:#252728}
+.band-page .band-hero-image img{object-fit:cover;object-position:center 40%;filter:none;background:#252728}
+.brend-stage .stage-image img{filter:none;object-position:center 42%!important}
+.band-page .button.primary{background:transparent;border-color:#7b7c76;color:var(--ink);font-family:var(--display-font);font-size:13px;font-weight:600;letter-spacing:0;min-height:56px;padding:16px 22px;filter:none}
+.band-page .button.primary:hover{background:#ffffff0b;border-color:var(--accent);filter:none}
+.band-page .button.primary:active{background:#ffffff14}
+.band-page .band-hero-copy .button.primary{gap:16px}
+.band-page .band-hero-copy .button.primary>span{display:grid;place-items:center;flex:0 0 26px;height:26px;border:1px solid #7b7c76;border-radius:50%;font-family:Arial,sans-serif;font-size:9px;padding-left:1px}
+.band-page .button.primary small{font-family:Arial,sans-serif;font-size:10px;color:var(--muted);opacity:1;margin-left:12px}
+.band-page .other-band{background:#26292a;color:var(--ink);border-bottom:1px solid var(--line)}
+.band-page .other-band:hover{background:#303435}
+.band-page .orbit-song,.mybach .orbit-song{font-family:var(--display-font);font-weight:450;font-style:normal;letter-spacing:-.02em}
+.organizer-about,.band-about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.organizer-about h2,.band-about h2{font-family:var(--display-font);font-weight:600;letter-spacing:-.045em}
+.about-lead{font-family:var(--display-font);font-size:clamp(22px,2.3vw,34px);font-weight:500;line-height:1.3;letter-spacing:-.035em;max-width:650px}
+.organizer-about-copy .muted,.band-about-copy .muted{margin-top:22px;max-width:560px}
+.band-about-copy .text-link{margin-top:26px}
+.about-links{display:flex;flex-wrap:wrap;gap:18px 32px;margin-top:28px}
+.about-links .text-link{min-height:44px;align-items:center}
+.band-gallery{columns:3;column-gap:18px}
+.gallery-tile{position:relative;display:block;break-inside:avoid;width:100%;margin:0 0 18px;padding:0;border:0;background:#282b2c;text-align:left;overflow:hidden}
+.gallery-tile img{display:block;width:100%;height:auto;transition:transform .4s ease}
+.gallery-tile:hover img{transform:scale(1.025)}
+.gallery-tile:focus-visible{outline-offset:3px}
+.gallery-expand{position:absolute;right:14px;bottom:14px;display:grid;place-items:center;width:34px;height:34px;border:1px solid #ffffff90;border-radius:50%;color:#fff;background:#14141450;font-size:20px;line-height:1;pointer-events:none}
+.gallery-total{font-size:11px;letter-spacing:.1em;white-space:nowrap}
+.photo-dialog{width:min(1180px,calc(100vw - 32px));max-width:calc(100vw - 32px);height:min(880px,calc(100dvh - 32px));max-height:calc(100dvh - 32px);padding:56px 66px 24px;overflow:hidden;background:#17191a;color:#f3f0e8}
+.photo-stage{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:18px;height:100%;min-height:0;margin:0}
+.photo-view{display:block;flex:1;min-height:0;max-height:100%;width:100%;object-fit:contain;touch-action:pan-y}
+.photo-stage figcaption{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;font-size:12px;line-height:1.4;color:#c8c9c3}
+.photo-counter{white-space:nowrap}
+.photo-close,.photo-prev,.photo-next{position:absolute;display:grid;place-items:center;width:44px;height:44px;padding:10px;border:1px solid #686c6c;background:#17191a;color:#f3f0e8}
+.photo-close svg,.photo-prev svg,.photo-next svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.photo-close{right:12px;top:8px;border:0}
+.photo-prev{left:10px;top:calc(50% - 22px)}
+.photo-next{right:10px;top:calc(50% - 22px)}
+@media(min-width:761px) and (max-width:1100px){.brend .band-hero h1,.mybach .band-hero h1{font-size:clamp(52px,6.4vw,72px)}}
+@media(max-width:760px){
+ .brend-stage h2,.mybach-stage h2{font-size:clamp(21px,5.5vw,34px)}
+ .brend .band-hero h1,.mybach .band-hero h1{font-size:clamp(48px,13.5vw,84px);white-space:nowrap}
+ .band-page .band-tagline{font-size:clamp(28px,7.6vw,38px);line-height:1.13}
+ .organizer-about,.band-about{grid-template-columns:1fr;gap:26px}
+ .about-lead{font-size:24px;line-height:1.35}
+ .organizer-about h2,.band-about h2{font-size:36px}
+ .organizer-about-copy .muted,.band-about-copy .muted{margin-top:18px}
+ .about-links{gap:12px 24px;margin-top:22px}
+ .band-gallery{columns:2;column-gap:12px}
+ .gallery-tile{margin-bottom:12px}
+ .gallery-expand{width:28px;height:28px;right:8px;bottom:8px;font-size:17px}
+ .photo-section .inline-heading>.gallery-total{display:block;font-size:10px}
+ .photo-section .inline-heading h2{font-size:clamp(27px,7.5vw,36px);line-height:1.1}
+ .photo-dialog{width:calc(100vw - 24px);max-width:calc(100vw - 24px);height:calc(100dvh - 24px);max-height:calc(100dvh - 24px);padding:56px 14px 70px}
+ .photo-stage{gap:14px}
+ .photo-stage figcaption{font-size:11px;align-items:flex-start;gap:12px}
+ .photo-prev,.photo-next{top:auto;bottom:12px}
+ .photo-prev{left:14px}.photo-next{right:14px}
+}

@@ -15,3 +15,5 @@
 /assets/*
 !/assets/*.webp
 !/assets/*-promo-web.mp4
+!/assets/manrope-variable.ttf
+!/assets/manrope-OFL.txt
