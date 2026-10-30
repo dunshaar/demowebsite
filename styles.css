@@ -264,3 +264,19 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
  .contacts-number-arrow{font-size:27px}
 }
 @media(max-width:360px){.contacts-number{font-size:26px}.contacts-number-arrow{font-size:24px}.contacts-person{gap:6px 16px}}
+
+/* Selected cover photographs: preserve the complete composition in each frame. */
+.hub-page .stage-image{height:auto;aspect-ratio:3/2;background:#f8f7f5}
+.hub-page .brend-stage .stage-image img{object-fit:contain;object-position:left center!important;filter:none}
+.hub-page .mybach-stage .stage-image img{object-fit:contain;object-position:center 58%!important;filter:none}
+.brend .band-hero-image{background:#eeece8}
+.brend .band-hero-image img{object-fit:contain;object-position:left center;filter:none;background:transparent}
+.mybach .band-hero-image{background:#f8f7f5}
+.mybach .band-hero-image img{object-fit:contain;object-position:center 56%;filter:none;background:transparent}
+.band-page .band-hero-image .image-caption{color:#343633;opacity:1;text-shadow:0 1px 3px #fff9}
+@media(max-width:760px){
+ .brend .band-hero-image{aspect-ratio:3/2}
+ .mybach .band-hero-image{aspect-ratio:9/5}
+ .hub-page .mybach-stage .stage-image img{object-position:center!important}
+ .band-page .band-hero-image .image-caption{bottom:12px;left:18px}
+}
