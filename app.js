@@ -100,3 +100,28 @@ if (photoDialog) {
     photoOpener?.focus({preventScroll: true});
   });
 }
+
+// Keep copy controls hidden until their shared handler is attached.
+document.querySelectorAll('[data-copy-phone]').forEach(button => {
+  const status = button.closest('.contact-actions').querySelector('.contact-status-text');
+  let copying = false;
+
+  button.addEventListener('click', async () => {
+    if (copying) return;
+    copying = true;
+    button.setAttribute('aria-disabled', 'true');
+    status.textContent = '';
+
+    try {
+      await navigator.clipboard.writeText(button.dataset.copyPhone);
+      status.textContent = 'Номер скопирован';
+    } catch {
+      status.textContent = 'Не удалось скопировать. Выделите номер вручную';
+    } finally {
+      copying = false;
+      button.removeAttribute('aria-disabled');
+    }
+  });
+
+  button.hidden = false;
+});
