@@ -280,3 +280,107 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
  .hub-page .mybach-stage .stage-image img{object-position:center!important}
  .band-page .band-hero-image .image-caption{bottom:12px;left:18px}
 }
+
+/* Producer, programme and contact hierarchy — November 2026. */
+.hub-page h1,.hub-page h2,.hub-page h3{font-family:var(--display-font)}
+.role-compact{display:none}
+.organizer-header .organizer-brand small{font-size:12px;letter-spacing:0}
+.organizer-header nav{gap:20px;font-size:13px}
+.organizer-header .header-contacts{font-weight:400;margin-left:10px}
+.hub-intro{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:end}
+.hub-intro .hub-lead{font-size:16px;line-height:1.6;max-width:490px;margin:0;padding:0;color:var(--muted)}
+.hub-page .stage:hover img{transform:none}
+.stage-link{font-size:14px}
+.stage-text p{font-size:15px}
+.media-row.promo-row{grid-template-columns:112px minmax(0,1fr) auto 22px;gap:20px;padding:18px 0}
+.media-row>img{width:112px;height:72px;object-fit:cover}
+.media-row-copy{display:flex;flex-direction:column;gap:8px}
+.media-row-copy strong{font-family:var(--display-font);font-size:18px}
+.media-row-copy>span{font-size:14px;color:var(--muted)}
+.media-row time{font-size:13px}
+.media-play{font-size:12px}
+.media-row:hover .media-row-copy>span{text-decoration:underline;text-underline-offset:4px}
+.events-section .section-heading{margin-bottom:32px}
+.event-types{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
+.event-types article+article{border-left:1px solid var(--line);padding-left:36px}
+.event-types h3,.preparation-steps h3,.band-terms h3{font-family:var(--display-font);font-size:18px;font-weight:650;letter-spacing:-.025em;line-height:1.3}
+.event-types p,.preparation-steps p,.producer-copy p,.terms-section>p,.band-description,.band-terms p{font-size:16px;line-height:1.65;color:var(--muted)}
+.event-types p{margin-top:12px;max-width:340px}
+.producer-section{display:grid;grid-template-columns:minmax(160px,.65fr) minmax(0,1.2fr) minmax(0,1fr);align-items:start;gap:36px}
+.producer-photo{margin:0;max-width:260px}
+.producer-photo img{height:auto;width:100%}
+.producer-intro h2{font-size:clamp(30px,3vw,44px);line-height:1.12}
+.producer-role{font-size:16px;line-height:1.5;margin-top:16px}
+.producer-copy{margin-top:24px}
+.producer-copy p+p{margin-top:16px}
+.preparation-steps{list-style:none;padding:0;margin:0;counter-reset:step}
+.preparation-steps li{counter-increment:step;position:relative;border-top:1px solid var(--line);padding:20px 0 20px 32px}
+.preparation-steps li::before{content:counter(step,decimal-leading-zero);position:absolute;top:23px;left:0;font-size:11px;color:var(--muted)}
+.preparation-steps p{margin-top:10px}
+.terms-section{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;padding-block:54px}
+.terms-section h2{font-size:clamp(26px,2.6vw,38px);line-height:1.15}
+.terms-section>p{max-width:720px}
+.contacts-person p{font-size:13px}
+.social-groups{display:flex;flex-wrap:wrap;gap:24px 40px;margin-top:28px}
+.social-group>span{font-family:var(--display-font);font-size:13px;font-weight:700}
+.social-group>div{display:flex;gap:20px;flex-wrap:wrap;margin-top:4px}
+.social-group a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:14px;color:var(--muted)}
+.social-group a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:5px}
+.band-page .band-hero{min-height:0;align-items:center;padding-block:36px;overflow:visible}
+.band-page .band-hero-copy{padding-top:24px;padding-bottom:24px}
+.band-page .band-hero-image{height:auto;aspect-ratio:auto;align-self:center;background:transparent}
+.band-page .band-hero-image img{height:auto;object-fit:contain;background:transparent}
+.band-page .hero-description{font-size:16px;line-height:1.6;max-width:400px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:20px 28px;align-items:center;margin-top:28px}
+.band-page .hero-actions .button{min-width:0}
+.band-page .hero-actions .button.primary,.band-page .booking-cta .button.primary{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.band-page .hero-actions .button.primary:hover,.band-page .booking-cta .button.primary:hover{background:#ded5c1;border-color:#ded5c1;color:var(--paper)}
+.band-page .hero-actions .button.primary small{color:inherit}
+.band-page .hero-actions .text-link{font-size:14px;min-height:48px;align-items:center}
+.band-description{margin-top:24px}
+.band-terms{margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+.band-terms p{margin-top:10px}
+.music-orbit .tags{gap:8px 18px}
+.music-orbit .tags span{border:0;border-radius:0;padding:0;font-size:14px;color:var(--muted)}
+.music-orbit .repertoire-link{font-family:var(--display-font);font-size:17px;font-weight:650;border-bottom:1px solid var(--accent);padding:14px 0;color:var(--ink)}
+.band-contact-actions{display:flex;flex-direction:column;align-items:flex-start;gap:16px;min-width:0}
+.band-page .booking-cta .contact-direct{font-size:clamp(20px,2.3vw,30px);font-weight:650;letter-spacing:-.035em;white-space:nowrap;min-width:0}
+.band-contact-actions>.text-link{font-size:14px;min-height:44px;align-items:center}
+.band-contact-actions .social-groups{margin-top:0}
+.invite-person{font-size:14px;color:var(--muted);line-height:1.6;margin-top:20px}
+.band-page .other-band{grid-template-columns:auto 1fr auto;gap:28px;padding-block:26px;background:transparent;color:var(--muted)}
+.band-page .other-band strong{font-size:24px;letter-spacing:-.035em}
+.band-page .other-band .other-arrow{font-size:24px}
+.band-page .other-band:hover{background:#ffffff04;color:var(--ink)}
+.organizer-footer{padding-block:26px}
+@media(max-width:1100px){
+ .organizer-header{gap:16px}.organizer-header nav{gap:14px}.organizer-header .header-contacts{margin-left:0}
+ .organizer-header .organizer-brand small{font-size:11px}
+ .hub-intro{gap:30px}.media-row.promo-row{grid-template-columns:88px minmax(0,1fr) auto 16px;gap:14px}.media-row>img{width:88px;height:60px}
+ .producer-section{grid-template-columns:180px minmax(0,1fr);gap:28px}.preparation-steps{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+ .event-types{gap:24px}.event-types article+article{padding-left:24px}
+}
+@media(max-width:760px){
+ .role-wide{display:none}.role-compact{display:inline}.organizer-header .organizer-brand small{font-size:9px}
+ .organizer-header nav{gap:24px;font-size:13px}
+ .hub-intro{display:block;padding-top:24px;padding-bottom:24px}
+ .hub-intro h1{font-size:clamp(28px,7.8vw,44px);line-height:1.08}
+ .hub-intro .hub-lead{font-size:16px;line-height:1.5;max-width:540px;margin-top:16px}
+ .stage-text{padding:15px 12px;gap:14px}.stage-text p{font-size:13px;line-height:1.5;min-height:6em;margin-top:10px}.stage-link{font-size:13px}
+ .media-row.promo-row{grid-template-columns:88px minmax(0,1fr) auto 16px;gap:12px;padding:16px 0}.media-row>img{width:88px;height:60px}.media-row-copy strong{font-size:16px}.media-row-copy>span{font-size:13px}.media-row time{font-size:12px}
+ .event-types{grid-template-columns:1fr;gap:20px}.event-types article+article{padding:20px 0 0;border:0;border-top:1px solid var(--line)}.event-types p{margin-top:8px;max-width:none}
+ .producer-section{grid-template-columns:112px minmax(0,1fr);gap:24px 20px}.producer-photo{grid-row:1;grid-column:1}.producer-intro{display:contents}
+ .producer-heading{grid-row:1;grid-column:2;align-self:center}.producer-heading .eyebrow{font-size:9px;margin-bottom:12px}.producer-intro h2{font-size:28px}.producer-role{font-size:14px;margin-top:12px}
+ .producer-copy{grid-column:1/-1;margin-top:0}.preparation-steps{display:block;grid-column:1/-1}.preparation-steps li{padding-block:18px}.preparation-steps li::before{top:21px}
+ .terms-section{grid-template-columns:1fr;gap:20px;padding-block:36px}.terms-section h2{font-size:28px}
+ .band-page .band-hero{padding-top:0;padding-bottom:0}.band-page .band-hero-copy{padding:30px var(--gutter)}
+ .band-page .band-tagline{font-size:clamp(27px,7vw,36px)}.hero-actions{margin-top:24px;gap:14px 24px}.band-page .hero-description{margin-bottom:0;font-size:16px}
+ .band-page .other-band{grid-template-columns:auto 1fr auto;gap:18px;padding-block:24px}.band-page .other-band>span:first-child{grid-column:auto;font-size:9px}.band-page .other-band strong{font-size:22px}
+ .band-page .booking-cta{gap:28px}.band-contact-actions{width:100%}.band-page .booking-cta .contact-direct{width:100%;font-size:26px;justify-content:center}
+}
+@media(max-width:360px){
+ .media-row.promo-row{grid-template-columns:72px minmax(0,1fr) auto 12px;gap:10px}.media-row>img{width:72px;height:54px}.media-row-copy>span{font-size:12px}
+ .stage-text{padding:14px 10px}.stage-text p{font-size:12px;min-height:6em}.stage-link{font-size:13px}
+ .producer-section{grid-template-columns:96px minmax(0,1fr);gap:22px 16px}.producer-intro h2{font-size:25px}.producer-role{font-size:13px}
+ .band-page .booking-cta .contact-direct{font-size:24px}
+}
