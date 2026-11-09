@@ -348,7 +348,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .band-contact-actions>.text-link{font-size:14px;min-height:44px;align-items:center}
 .band-contact-actions .social-groups{margin-top:0}
 .invite-person{font-size:14px;color:var(--muted);line-height:1.6;margin-top:20px}
-.band-page .other-band{grid-template-columns:auto 1fr auto;gap:28px;padding-block:26px;background:transparent;color:var(--muted)}
+.band-page .other-band{grid-template-columns:1fr auto;gap:28px;padding-block:26px;background:transparent;color:var(--muted)}
 .band-page .other-band strong{font-size:24px;letter-spacing:-.035em}
 .band-page .other-band .other-arrow{font-size:24px}
 .band-page .other-band:hover{background:#ffffff04;color:var(--ink)}
@@ -375,7 +375,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
  .terms-section{grid-template-columns:1fr;gap:20px;padding-block:36px}.terms-section h2{font-size:28px}
  .band-page .band-hero{padding-top:0;padding-bottom:0}.band-page .band-hero-copy{padding:30px var(--gutter)}
  .band-page .band-tagline{font-size:clamp(27px,7vw,36px)}.hero-actions{margin-top:24px;gap:14px 24px}.band-page .hero-description{margin-bottom:0;font-size:16px}
- .band-page .other-band{grid-template-columns:auto 1fr auto;gap:18px;padding-block:24px}.band-page .other-band>span:first-child{grid-column:auto;font-size:9px}.band-page .other-band strong{font-size:22px}
+ .band-page .other-band{grid-template-columns:1fr auto;gap:18px;padding-block:24px}.band-page .other-band>span:first-child{grid-column:auto;font-size:9px}.band-page .other-band strong{font-size:22px}
  .band-page .booking-cta{gap:28px}.band-contact-actions{width:100%}.band-page .booking-cta .contact-direct{width:100%;font-size:26px;justify-content:center}
 }
 @media(max-width:360px){
