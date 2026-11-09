@@ -1,0 +1,56 @@
+name: Publish static site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+
+      - name: Prepare public files
+        shell: bash
+        run: |
+          set -euo pipefail
+          public_dir="$RUNNER_TEMP/pages-public"
+          mkdir -p "$public_dir"
+          git archive --format=tar HEAD -- \
+            index.html brend.html mybach.html \
+            brend-repertoire.html mybach-repertoire.html \
+            styles.css repertoire.css app.js .nojekyll assets/ \
+            | tar -xf - -C "$public_dir"
+          test -f "$public_dir/index.html"
+          test -z "$(find "$public_dir" -type l -print -quit)"
+          du -sh "$public_dir"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: ${{ runner.temp }}/pages-public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5

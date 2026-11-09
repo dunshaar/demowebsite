@@ -19,3 +19,9 @@
 !/assets/manrope-OFL.txt
 
 !/assets/share-*-20261109.jpg
+
+!/.github/
+/.github/*
+!/.github/workflows/
+/.github/workflows/*
+!/.github/workflows/pages.yml

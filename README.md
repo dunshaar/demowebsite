@@ -4,7 +4,11 @@
 
 ## Публикация
 
-В GitHub Pages выбрать **Deploy from a branch → main → / (root)**. Адрес сайта: https://dunshaar.github.io/demowebsite/
+Источник публикации GitHub Pages — **GitHub Actions**. Адрес сайта: https://dunshaar.github.io/demowebsite/
+
+Workflow `.github/workflows/pages.yml` запускается при push в `main` или вручную через `workflow_dispatch`. Одна группа concurrency `pages` исключает параллельные запуски этого workflow; уже начатое размещение не отменяется новым push. Публикация разрешена только из `main`.
+
+Перед загрузкой workflow собирает отдельную папку из файлов, сохранённых в Git: пяти публичных HTML, `styles.css`, `repertoire.css`, `app.js`, `.nojekyll` и `assets/`. README, настройки Git, workflow, исходники, архивы и локальные проверочные файлы в артефакт не входят. Используются официальные Actions, закреплённые по SHA. Обработчик сайта и содержимое страниц при переходе на этот способ публикации не меняются.
 
 Страницы, CSS, JavaScript и папка `assets/` должны находиться рядом с `index.html`. Все внутренние ссылки относительные. Исходные материалы, архивы и локальные служебные файлы в репозиторий не входят.
 
