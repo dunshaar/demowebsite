@@ -25,3 +25,9 @@
 !/.github/workflows/
 /.github/workflows/*
 !/.github/workflows/pages.yml
+
+# Reproducible REG.RU release tooling; generated releases stay local.
+!/ops/
+/ops/*
+!/ops/build_reg_ru.py
+!/ops/REG-RU.md

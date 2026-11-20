@@ -4,7 +4,9 @@
 
 ## Публикация
 
-Источник публикации GitHub Pages — **GitHub Actions**. Адрес сайта: https://dunshaar.github.io/demowebsite/
+Основной сайт размещается на REG.RU: https://www.кавергруппачелябинск.рф/. Подготовка отдельной публичной копии, проверка и обновление описаны в [ops/REG-RU.md](ops/REG-RU.md). Видимое содержимое обоих размещений берётся из одних исходников; адреса метаданных и индексация задаются при сборке REG.RU.
+
+Источник публикации GitHub Pages — **GitHub Actions**. Адрес демоверсии с запретом индексации: https://dunshaar.github.io/demowebsite/
 
 Workflow `.github/workflows/pages.yml` запускается при push в `main` или вручную через `workflow_dispatch`. Одна группа concurrency `pages` исключает параллельные запуски этого workflow; уже начатое размещение не отменяется новым push. Публикация разрешена только из `main`.
 
